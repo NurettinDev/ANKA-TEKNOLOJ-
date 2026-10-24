@@ -141,6 +141,7 @@ t[0].append(99)
 # tuple a eleman eklemek için farklı bir tuple tanımlanıp birbirine eklenir
 t = (1, 2, 3)
 t = t + (4,)
+print(t)
 
 x,y = (10,20)
 print(x)
