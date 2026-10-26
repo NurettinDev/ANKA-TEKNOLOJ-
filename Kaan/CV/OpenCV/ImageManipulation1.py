@@ -3,12 +3,11 @@ import sys
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
-from IPython.display import Image
 
 np.set_printoptions(threshold=sys.maxsize) # çıktılar tam haliyle verilir
 #%%
 # resmi grayscale olarak okur
-cb_img = cv.imread(r"D:\ANKA\CV\OpenCV\Pictures\chessboard.png", 0)
+cb_img = cv.imread(r"Pictures\chessboard.png", 0)
 print(cb_img) # 2 boyutlu diziyi verir. 8bit renk aralığında olduğu için değerler 0-255 arasında gelir
 
 #%%
@@ -28,7 +27,7 @@ plt.imshow(cb_img, cmap="gray")
 
 # %%
 # 1 vererek renkli resim olarak okuttuk
-baykar_renkli = cv.imread(r"D:\ANKA\CV\OpenCV\Pictures\Baykar.png", 1)
+baykar_renkli = cv.imread(r"Pictures\Baykar.png", 1)
 print(f"Image size : {baykar_renkli.shape}") # (480, 416, 3) 3 kanal
 print(f"Image data type : {baykar_renkli.dtype}")
 plt.imshow(baykar_renkli)
@@ -43,7 +42,7 @@ baykar_renkli_reversed = baykar_renkli[:,:, ::-1]
 plt.imshow(baykar_renkli_reversed)
 # %%
 # renkli resim olarak okuyoruz ve split ile kanallarına ayrıştırıyoruz
-resim_split = cv.imread(r"D:\ANKA\CV\OpenCV\Pictures\RB22 Reveal.jpeg", cv.IMREAD_COLOR)
+resim_split = cv.imread(r"Pictures\RB22 Reveal.jpeg", cv.IMREAD_COLOR)
 b,g,r = cv.split(resim_split)
 
 # ayrılmış kanalları gösterelim
@@ -84,7 +83,7 @@ plt.subplot(144);plt.imshow(resim_modifiedh_rgb);plt.title("Modifiye Edilmiş HS
 
 # %%
 # resimleri kaydetmke için cv.imwrite() metodu kullanılır
-cv.imwrite(r"D:\ANKA\CV\OpenCV\Pictures\modified_rb22.jpeg", resim_modifiedh_rgb)
+cv.imwrite(r"Pictures\modified_rb22.jpeg", resim_modifiedh_rgb)
 # %%
 # matplotlib in imshow u ile cv nin imshow metodu farklı kullanılır
 # cv için bir window oluşturulması gerekir.
