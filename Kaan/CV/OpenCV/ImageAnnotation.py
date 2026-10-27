@@ -1,7 +1,5 @@
 #%%
-import sys
 import cv2 as cv
-import numpy as np
 import matplotlib.pyplot as plt
 #%%
 st_bgr = cv.imread(r"Pictures\soloturk.jpg", cv.IMREAD_COLOR)
