@@ -1,23 +1,20 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
 
 AD SOYAD: Kaan
 PROJE: Akıllı Batarya Şarj Planlayıcısı
-HEDEF ZORLUK: 5/10 (orta-alt, algoritma odaklı)
-HEDEF ÇALIŞMA SÜRESİ: 4-5 gün, toplam yaklaşık 8-15 saat
-SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+SON TESLİM: 13 Aralık 2026 Cuma, 23.59 
 
-============================================================
+
 1) PROJENİN AMACI
-============================================================
+
 Atölyedeki bataryalar için şarj talepleri oluşturuluyor. Bu basitleştirilmiş senaryoda aynı turda verilebilecek toplam enerji sınırlı. Bataryanın sıcaklığına ve talep önceliğine göre hangi taleplerin kabul edileceğini belirleyen yazılım tasarla.
 
 Bu, Python ve algoritmik problem çözme ödevidir. Kodunu nasıl
 kuracağına sen karar vereceksin. Hazır algoritma verilmiyor.
 
-============================================================
+
 2) KULLANILACAK BİLGİLER
-============================================================
+
 Her işlem/talep için aşağıdaki bilgiler ele alınmalı:
 Batarya kimliği, öncelik (1-5), istenen enerji (pozitif tam sayı, birim), sıcaklık (sayı, °C).
 
@@ -29,9 +26,9 @@ miktar/alan gibi kapasite tüketen değerler pozitif tam sayı olmalı.
 Geçersiz veya tekrar eden kimlik, aralık dışı öncelik ve geçersiz
 kapasite tüketimi bilgisi olan kayıtlar reddedilmeli.
 
-============================================================
+
 3) ZORUNLU KARAR KURALLARI
-============================================================
+
 A. Uygunluk: Bu ödevin varsayımı olarak 0°C ile 45°C (sınırlar dahil) arasındaki talepler uygun kabul edilir. Aralık dışındaki talepler reddedilir.
 B. Sıralama: Uygun kayıtlarda önceliği yüksek olan önce değerlendirilir.
 C. Eşit öncelik: Sisteme önce eklenen kayıt önce değerlendirilir.
@@ -47,9 +44,9 @@ G. Durumlar: Her kaydın sonucu 'kabul edildi / bekliyor / reddedildi'
 Bu projede dinamik yeniden planlama, işlemi geri alma, internet,
 gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
 
-============================================================
+
 4) BEKLENEN YAZILIM YAPISI
-============================================================
+
 - Python temel konuları ve OOP kullanılacak.
 - En az iki sınıf bulunacak: kayıt/talep bilgisini tutan kısım ve
   tüm kayıtları değerlendirip karar veren kısım birbirinden ayrılmalı.
@@ -60,17 +57,17 @@ gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
 - Örnek veriler program içerisinde tanımlanabilir; sonuçların
   okunabilir metin olarak gösterilmesi yeterli.
 
-============================================================
+
 5) SONUÇ OLARAK NE GÖRMEK İSTİYORUZ?
-============================================================
+
 Kabul edilen şarj talepleri, enerji yetmediği için bekletilenler, sıcaklık nedeniyle reddedilenler ve kullanılan/kalan enerji.
 
 Örnek bir kayıt reddedilmisse nedenini kısa bir cumleyle açıkla.
 Sadece bir liste gösterip neden o sonuca ulaşıldığını gizleme.
 
-============================================================
+
 6) KONTROL İÇİN KÜÇÜK ÖRNEK
-============================================================
+
 Başlangıç kapasitesi: 10 enerji birimi
 Kayitlar (yazıldıkları sırayla):
    C1 | öncelik 5 | enerji 6 | sıcaklık 35°C
@@ -83,9 +80,9 @@ Kabul edilenler: C1, C3 | Bekleyen: C2 | Reddedilen: C4 | Kullanılan: 10 | Kala
 
 Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
 
-============================================================
+
 7) EN AZ 4 TEST SENARYOSU
-============================================================
+
    1. Sıcaklığı 0°C veya 45°C olan talepler sıcaklık bakımından geçerli sayılmalı.
    2. Eşit öncelikteki batarya talepleri kayıt sırasıyla değerlendirilmeli.
    3. Büyük enerji talebi beklerken küçük talep kabul edilebilmeli.
@@ -94,9 +91,9 @@ Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
 Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
 uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
 
-============================================================
+
 8) TESLİM VE DEĞERLENDİRME
-============================================================
+
 Teslim edilecekler:
 - Kendi yazdığın çalışır Python kaynak kodu.
 - En az 4 farklı test durumu ve sonuclari.
