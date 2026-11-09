@@ -1,14 +1,12 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
 
 AD SOYAD: Kaan
 PROJE: Akıllı Batarya Şarj Planlayıcısı
-SON TESLİM: 14 Aralık 2026
-ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
+SON TESLİM: 13 Kasım 2026
 
-============================================================
+
 1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
-============================================================
+
 Elindeki tek bir kayıt hangi bilgileri taşımalı?
 Kayıtların hepsi hangi ortak kurallara göre seçilecek?
 En sonunda hangi üç grubu açıkça göstermelisin?
@@ -16,18 +14,18 @@ En sonunda hangi üç grubu açıkça göstermelisin?
 Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
 Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
 
-============================================================
+
 2) SINIFLARIN SORUMLULUKLARINI AYIR
-============================================================
+
 Bir sınıf batarya talebini; diğer sınıf toplam enerji bütçesini ve kabul sürecini yönetecek şekilde tasarlanabilir.
 
 Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
 ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
 sorumlulukları anlaşılır şekilde paylaştır.
 
-============================================================
+
 3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
-============================================================
+
 - Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
   Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
 - Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
@@ -36,35 +34,35 @@ sorumlulukları anlaşılır şekilde paylaştır.
 - Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
 - Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
 
-============================================================
+
 4) BU PROJEYE ÖZEL İPUÇLARI
-============================================================
+
 1. Sıcaklık kontrolü ile enerji bütçesi kontrolü aynı şey değildir: bir talep güvenli sıcaklıkta olsa da bütçeye sığmayabilir.
 
 2. 0°C ve 45°C sınırlarının geçerli sayıldığını göz önünde bulundur. Enerji hesabına yalnızca kabul edilen talepleri ekle.
 
 3. Enerjisi fazla olan bir talep bekliyorsa geriye kalan enerjiyle daha küçük bir talebi kabul edip edemeyeceğini düşün.
 
-============================================================
+
 5) HATA AYIKLAMA İÇİN 4 SORU
-============================================================
+
 1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
 2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
 3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
 4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
    yalnızca bir listede mi bulunuyor?
 
-============================================================
+
 6) TEST FİKİRLERİ
-============================================================
+
    1. Sıcaklığı 0°C veya 45°C olan talepler sıcaklık bakımından geçerli sayılmalı.
    2. Eşit öncelikteki batarya talepleri kayıt sırasıyla değerlendirilmeli.
    3. Büyük enerji talebi beklerken küçük talep kabul edilebilmeli.
    4. 46°C sıcaklıklı veya negatif enerji talepli kayıt reddedilmeli.
 
-============================================================
+
 7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
-============================================================
+
 Gerçek batarya şarj algoritması, hücre dengeleme, akım/gerilim hesabı veya donanım kontrolü beklenmiyor. Sıcaklık aralığı yalnızca bu yazılım ödevi için tanımlanmış varsayımdır.
 
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
