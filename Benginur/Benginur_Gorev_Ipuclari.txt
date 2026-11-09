@@ -1,14 +1,11 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
 
-AD SOYAD: Benginur
+AD: Benginur
 PROJE: Uçuş Görev Sıralama Sistemi
 SON TESLİM: 14 Aralık 2026
-ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
 
-============================================================
 1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
-============================================================
+
 Elindeki tek bir kayıt hangi bilgileri taşımalı?
 Kayıtların hepsi hangi ortak kurallara göre seçilecek?
 En sonunda hangi üç grubu açıkça göstermelisin?
@@ -16,18 +13,16 @@ En sonunda hangi üç grubu açıkça göstermelisin?
 Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
 Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
 
-============================================================
 2) SINIFLARIN SORUMLULUKLARINI AYIR
-============================================================
+
 Bir sınıf görevin özelliklerini, diğer sınıf uçuş süresi bütçesini ve görev planını yönetecek biçimde tasarlanabilir.
 
 Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
 ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
 sorumlulukları anlaşılır şekilde paylaştır.
 
-============================================================
 3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
-============================================================
+
 - Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
   Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
 - Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
@@ -36,35 +31,35 @@ sorumlulukları anlaşılır şekilde paylaştır.
 - Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
 - Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
 
-============================================================
+
 4) BU PROJEYE ÖZEL İPUÇLARI
-============================================================
+
 1. Görevin önceliği ile süresi ayrı özelliklerdir. Öncelik sırasına göre değerlendirirken her kabul edilen görevden sonra kalan süreyi yeniden hesaplaman gerekir.
 
 2. Bir görev sığmadığında tamamen durmak yerine başka görevlerin sığıp sığmadığına bakılabilir. Bunun ne zaman mümkün olduğunu örnekler üzerinde düşün.
 
 3. Eşit öncelikte farklı süreli iki görev varsa görevleri süreye göre değil, eklenme sırasına göre değerlendirmen gerekiyor.
 
-============================================================
+
 5) HATA AYIKLAMA İÇİN 4 SORU
-============================================================
+
 1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
 2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
 3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
 4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
    yalnızca bir listede mi bulunuyor?
 
-============================================================
+
 6) TEST FİKİRLERİ
-============================================================
+
    1. Tüm görevler uygun ve süre toplamı limitin altında: hepsi kabul edilmeli.
    2. Eşit öncelikli görevlerin eklenme sırası korunmalı.
    3. Uzun bir görev beklerken daha kısa sonraki görev uçuşa alınabilmeli.
    4. Uçuşa uygun olmayan veya süresi sıfır olan görev reddedilmeli.
 
-============================================================
+
 7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
-============================================================
+
 Gerçek rota, hava durumu, konum hesaplaması ve uçuş kontrol yazılımı istenmiyor. Sadece verilen görevlerin süre ve önceliğe göre planlanması bekleniyor.
 
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
