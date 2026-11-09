@@ -2,7 +2,7 @@
 
 AD SOYAD: Kaan
 PROJE: Akıllı Batarya Şarj Planlayıcısı
-SON TESLİM: 13 Aralık 2026 Cuma, 23.59 
+SON TESLİM: 13 Kasım 2026 Cuma, 23.59 
 
 
 1) PROJENİN AMACI
