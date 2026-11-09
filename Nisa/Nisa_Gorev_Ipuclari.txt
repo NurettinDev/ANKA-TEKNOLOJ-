@@ -1,14 +1,11 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
 
 AD SOYAD: Nisa
-PROJE: İHA Bakım Görev Planlayıcısı
-SON TESLİM: 14 Aralık 2026
-ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
+SON TESLİM: 13 Kasım 2026
 
-============================================================
+
 1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
-============================================================
+
 Elindeki tek bir kayıt hangi bilgileri taşımalı?
 Kayıtların hepsi hangi ortak kurallara göre seçilecek?
 En sonunda hangi üç grubu açıkça göstermelisin?
@@ -16,18 +13,18 @@ En sonunda hangi üç grubu açıkça göstermelisin?
 Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
 Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
 
-============================================================
+
 2) SINIFLARIN SORUMLULUKLARINI AYIR
-============================================================
+
 Bir sınıf bakım işini tanımlayabilir, diğer sınıf plan oluşturma ve süre bütçesini yönetme sorumluluğunu üstlenebilir.
 
 Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
 ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
 sorumlulukları anlaşılır şekilde paylaştır.
 
-============================================================
+
 3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
-============================================================
+
 - Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
   Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
 - Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
@@ -36,43 +33,38 @@ sorumlulukları anlaşılır şekilde paylaştır.
 - Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
 - Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
 
-============================================================
+
 4) BU PROJEYE ÖZEL İPUÇLARI
-============================================================
+
 1. Ekipman eksikliği nedeniyle reddedilen iş ile ekipmanı hazır ama vakti yetmeyen iş farklı sonuç üretmeli.
 
 2. Her bakım işi kabul edildiğinde kullanılabilir süre azalır. Bu hesabı birden fazla yerde tekrarlamadan yönetebileceğin bir yapı düşün.
 
 3. Süreye sığmayan yüksek öncelikli bir iş diğer küçük işlerin de otomatik olarak reddedilmesi anlamına gelmez.
 
-============================================================
+
 5) HATA AYIKLAMA İÇİN 4 SORU
-============================================================
+
 1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
 2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
 3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
 4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
    yalnızca bir listede mi bulunuyor?
 
-============================================================
+
 6) TEST FİKİRLERİ
-============================================================
+
    1. Tüm bakım işleri uygun ve süre yeterliyse hepsi planlanmalı.
    2. Eşit öncelikte işleri eklenme sırasıyla değerlendir.
    3. Uzun iş beklerken daha kısa iş kalan zamana sığabilmeli.
    4. Ekipmanı olmayan veya süresi negatif olan iş reddedilmeli.
 
-============================================================
+
 7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
-============================================================
+
 Gerçek bakım kılavuzu, arıza teşhisi ve parçaların birbirine bağımlılığı bu ödevin dışında. Tek oturumluk bir bakım planı yeterli.
 
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
 beklenmiyor. Kendi karar mantığını kurman ve neden doğru çalıştığını
 göstermen yeterli.
 
-İPUCU: Kısa, okunabilir ve doğru çalışan bir çözüm; gereksiz yere
-büyütülmüş bir projeden daha değerlidir.
-
-NOT: Bu ipuçları yalnızca aynı isimli YENİ 'Görev.txt' dosyası
-için hazırlanmıştır; eski sürümün ipuçlarıyla karıştırma.
