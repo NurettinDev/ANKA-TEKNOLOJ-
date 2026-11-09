@@ -2,7 +2,7 @@
 
 AD SOYAD: Burak
 PROJE: Laboratuvar Kaynak Dağıtım Sistemi
-SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+SON TESLİM: 14 Ekim 2026 Cumartesi Saat: 18.00
 
 
 1) PROJENİN AMACI
