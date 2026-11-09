@@ -1,0 +1,115 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
+
+AD SOYAD: Ömer Atıcı
+PROJE: Yer İstasyonu Veri Yedekleme Planlayıcısı
+HEDEF ZORLUK: 5/10 (orta-alt, algoritma odaklı)
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün, toplam yaklaşık 8-15 saat
+SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+
+============================================================
+1) PROJENİN AMACI
+============================================================
+Yer istasyonunda uçuş raporları, görev notları ve analiz verileri için yedekleme talepleri bulunuyor. Tek bir yedekleme turunda ayrılan depolama alanı sınırlı. Öncelik ve dosya sağlamlığına göre hangi taleplerin yedekleneceğini belirleyen bir simülasyon oluştur.
+
+Bu, Python ve algoritmik problem çözme ödevidir. Kodunu nasıl
+kuracağına sen karar vereceksin. Hazır algoritma verilmiyor.
+
+============================================================
+2) KULLANILACAK BİLGİLER
+============================================================
+Her işlem/talep için aşağıdaki bilgiler ele alınmalı:
+Yedekleme kimliği, öncelik (1-5), gerekli alan (pozitif tam sayı, MB), dosya sağlamlığı (sağlam/bozuk).
+
+Kapasite: Bir yedekleme turunda kullanılabilecek toplam MB.
+
+Tüm kayıtların benzersiz bir kimliği olmalı. Öncelik 1 ile 5
+arasında bir tam sayı olmalı (5 en yüksek öncelik). Süre/yük/
+miktar/alan gibi kapasite tüketen değerler pozitif tam sayı olmalı.
+Geçersiz veya tekrar eden kimlik, aralık dışı öncelik ve geçersiz
+kapasite tüketimi bilgisi olan kayıtlar reddedilmeli.
+
+============================================================
+3) ZORUNLU KARAR KURALLARI
+============================================================
+A. Uygunluk: Bozuk olduğu belirtilen dosyaların yedekleme talepleri reddedilir.
+B. Sıralama: Uygun kayıtlarda önceliği yüksek olan önce değerlendirilir.
+C. Eşit öncelik: Sisteme önce eklenen kayıt önce değerlendirilir.
+D. Kapasite: Bir kayıt, kalan kapasiteye sığarsa kabul edilir;
+   aksi halde "bekleyen" durumuna alınır.
+E. Devam: Bir kayıt sığmadı diye işlemler bitmez. Sonraki uygun
+   kayıtlar da kontrol edilir.
+F. Hesap: Sadece kabul edilen kayıtlar kapasite kullanır;
+   kullanılan toplam kapasite asla başlangıç limitini aşamaz.
+G. Durumlar: Her kaydın sonucu 'kabul edildi / bekliyor / reddedildi'
+   kategorilerinden tam olarak biri olmalı. Bir kayıt iki durumda olamaz.
+
+Bu projede dinamik yeniden planlama, işlemi geri alma, internet,
+gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
+
+============================================================
+4) BEKLENEN YAZILIM YAPISI
+============================================================
+- Python temel konuları ve OOP kullanılacak.
+- En az iki sınıf bulunacak: kayıt/talep bilgisini tutan kısım ve
+  tüm kayıtları değerlendirip karar veren kısım birbirinden ayrılmalı.
+- Sınıflara ait anlamlı özellikler ve metotlar kullanılmalı.
+- Liste/sözlük gibi standart Python veri yapıları kullanılabilir.
+- Fonksiyon ve değişken isimleri anlaşılır olmalı.
+- Harici kütüphane, JSON veya grafik arayüz gerekli değil.
+- Örnek veriler program içerisinde tanımlanabilir; sonuçların
+  okunabilir metin olarak gösterilmesi yeterli.
+
+============================================================
+5) SONUÇ OLARAK NE GÖRMEK İSTİYORUZ?
+============================================================
+Yedeklenen, yer olmadığı için bekleyen ve reddedilen taleplerin kimlikleri ile kullanılan/kalan alan.
+
+Örnek bir kayıt reddedilmisse nedenini kısa bir cumleyle açıkla.
+Sadece bir liste gösterip neden o sonuca ulaşıldığını gizleme.
+
+============================================================
+6) KONTROL İÇİN KÜÇÜK ÖRNEK
+============================================================
+Başlangıç kapasitesi: 9 MB
+Kayitlar (yazıldıkları sırayla):
+   D1 | öncelik 5 | alan 6 MB | sağlam
+   D2 | öncelik 4 | alan 4 MB | sağlam
+   D3 | öncelik 3 | alan 3 MB | sağlam
+   D4 | öncelik 2 | alan 2 MB | bozuk
+
+Beklenen karar:
+Yedeklenenler: D1, D3 | Bekleyen: D2 | Reddedilen: D4 | Kullanılan: 9 MB | Kalan: 0 MB.
+
+Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
+
+============================================================
+7) EN AZ 4 TEST SENARYOSU
+============================================================
+   1. Tüm dosyalar sağlam ve alan yeterliyse hepsi yedeklenmeli.
+   2. Aynı öncelikteki yedekleme taleplerinin eklenme sırası korunmalı.
+   3. Büyük dosya beklerken küçük dosya kalan alana sığabilmeli.
+   4. Bozuk veya sıfır boyutlu yedekleme isteği reddedilmeli.
+
+Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
+uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
+
+============================================================
+8) TESLİM VE DEĞERLENDİRME
+============================================================
+Teslim edilecekler:
+- Kendi yazdığın çalışır Python kaynak kodu.
+- En az 4 farklı test durumu ve sonuclari.
+- Algoritmani kendi cümlelerinle anlatan kısa açıklama (5-10 satır).
+
+DEĞERLENDİRME ÖZETİ (100 PUAN)
+- Algoritma ve kuralların doğru uygulanması: 40 puan
+- OOP (sınıfların ve sorumluluklarin doğru kullanımı): 20 puan
+- Okunabilir kod ve düzenli fonksiyonlar: 15 puan
+- Hata kontrolu ve 4 test senaryosu: 15 puan
+- Kısa algoritma aciklamasi: 10 puan
+
+Burada dosya sistemini programlamak değil, yedekleme işlerini öncelik ve alan kısıtıyla seçmek amaçlanıyor.
+
+NOT: Bu dosya, önceki görevin yerine geçen yeni ve kolaylastirilmis
+sürümdür. Eski gorev dosyalarıyla birleştirilmemelidir.
