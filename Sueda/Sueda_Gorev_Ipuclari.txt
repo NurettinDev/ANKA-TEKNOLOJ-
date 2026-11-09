@@ -1,0 +1,85 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+SUEDA - BİREYSEL GÖREV İPUÇLARI
+
+PROJE: İHA Yazılım Test Sırası Planlayıcısı
+ZORLUK: 5/10
+SON TESLİM: 14 Aralık 2026, 23.59 (TSİ)
+
+============================================================
+1. ALGORİTMAYI YAZMADAN ÖNCE
+============================================================
+
+- Tek bir testin hangi bilgileri taşıması gerektiğini düşün.
+- Testlerin hangi koşullarda reddedileceğini belirle.
+- Hazır ve geçerli testlerin sırasının nasıl belirleneceğini düşün.
+- Sonuçta hangi üç grubun gösterilmesi gerektiğini listele.
+
+Önce dört testlik küçük bir örneği kağıt üzerinde çözmek,
+karar akışını tasarlamayı kolaylaştırır.
+
+============================================================
+2. OOP YAPISINI PLANLA
+============================================================
+
+- Bir sınıf test senaryosuna ait bilgileri taşıyabilir.
+- Diğer sınıf testlerin değerlendirilmesini ve süre bütçesini
+  yönetebilir.
+- Hangi özelliklerin tek bir teste, hangilerinin bütün
+  planlama sistemine ait olduğunu düşün.
+- Aynı kontrolü defalarca yazmak yerine tekrar kullanılabilir
+  metot ve fonksiyonları araştır.
+
+============================================================
+3. KARAR AKIŞINDA DİKKAT
+============================================================
+
+- Geçersiz testleri planlama süresine dahil etme.
+- Öncelik derecesi yüksek olan önce değerlendirilmelidir.
+- Eşit öncelikte eklenme sırası korunmalıdır.
+- Bir testi planladığında kalan süre değişir.
+- Bir test sığmadığında sonraki testleri incelemeyi bırakma.
+- Bekleyen test ile reddedilen test aynı anlama gelmez.
+
+============================================================
+4. BU PROJEYE ÖZEL İPUÇLARI
+============================================================
+
+1. Testin hazır olması ile süreye sığması farklı koşullardır:
+   hazır bir test süre yetersizliği nedeniyle bekleyebilir.
+
+2. Test süresi sadece gerçekten planlanan testler için toplam
+   süreye eklenmelidir.
+
+3. Aynı kimlikle tekrar gelen test kaydını nasıl fark edeceğini
+   ve ilk kaydın sonucunu bozmadan nasıl reddedeceğini düşün.
+
+4. Testleri bölmen veya gerçek test kodlarını çalıştırman
+   gerekmiyor. Yalnızca planlama kararını vermelisin.
+
+============================================================
+5. KENDİNE SOR
+============================================================
+
+- Toplam süre sıfırsa sonuç nasıl olmalı?
+- Aynı öncelikte iki test hangi sırayla değerlendirilmeli?
+- Test hazır değilse, süresi yeterli olsa da seçilebilir mi?
+- Bir test sığmazsa daha kısa sonraki test seçilebilir mi?
+- Aynı kimlik iki kere gelirse iki kez süre tüketilir mi?
+- Planlanan, bekleyen ve reddedilen listeleri çakışıyor mu?
+- Kullanılan süre hiçbir zaman başlangıç sınırını aşıyor mu?
+
+============================================================
+6. TEST ETMEK İÇİN DÖRT FİKİR
+============================================================
+
+1. Bütün testler hazır ve toplam süre yeterli.
+2. Aynı öncelikte iki testin geliş sırası farklı.
+3. Yüksek öncelikli uzun test sığmıyor, sonraki kısa test sığıyor.
+4. Hazır olmayan, sıfır süreli veya tekrar kimlikli bir test var.
+
+İPUCU: Test sonuçlarını yalnızca liste olarak göstermek yerine,
+testlerin neden planlandığını, beklediğini veya reddedildiğini
+kısaca açıklayabilmek algoritmanı denetlemene yardımcı olur.
+
+Bu not bir çözüm kodu değildir. Amaç, algoritmayı kendi başına
+kurmana yardımcı olacak soruları ve düşünme yönünü göstermektir.

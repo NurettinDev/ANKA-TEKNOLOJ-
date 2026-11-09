@@ -1,0 +1,129 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJE GÖREVİ
+
+AD: Sueda
+PROJE: İHA Yazılım Test Sırası Planlayıcısı
+ZORLUK: 5/10 (orta-alt)
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün (yaklaşık 8-15 saat)
+SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+
+============================================================
+1. PROJENİN AMACI
+============================================================
+
+ANKA Teknoloji ekibi, İHA yazılımında yapılan değişikliklerin
+kontrolü için çeşitli test senaryoları hazırlamaktadır.
+
+Her testin önceliği ve çalıştırılma süresi farklıdır. Testlerin
+çalıştırılabileceği toplam süre ise sınırlıdır.
+
+Görevin, testlerin geçerliliğini kontrol eden; hazır testleri
+önceliklerine göre değerlendiren ve sınırlı süre içerisinde
+hangilerinin çalıştırılacağını belirleyen bir Python yazılımı
+geliştirmektir.
+
+Bu proje gerçek testleri çalıştırmayacaktır. Testlerin seçimini
+ve sırasını belirleyen bir algoritma simülasyonudur.
+
+============================================================
+2. TEST SENARYOSU BİLGİLERİ
+============================================================
+
+Her test için şu bilgiler bulunmalıdır:
+
+- Benzersiz test kimliği
+- Öncelik derecesi (1-5; 5 en yüksek)
+- Tahmini çalışma süresi (pozitif tam sayı, dakika)
+- Hazırlık durumu (hazır / hazır değil)
+
+Ayrıca sistemde toplam kullanılabilir test süresi tanımlanmalıdır.
+
+============================================================
+3. ALGORİTMA KURALLARI
+============================================================
+
+1. Hazır olmayan testler reddedilmelidir.
+2. Öncelik değeri 1-5 aralığında tam sayı olmalıdır.
+3. Test süresi sıfır veya negatif olamaz; pozitif tam sayı olmalıdır.
+4. Aynı test kimliği birden fazla kez kabul edilmemelidir.
+   Tekrar eden kimliğe sahip sonraki kayıt reddedilmelidir.
+5. Geçerli ve hazır testler yüksek öncelikten düşük önceliğe
+   doğru değerlendirilmelidir.
+6. Öncelikleri eşitse sisteme önce eklenen test önce gelir.
+7. Bir test kalan süreye tamamen sığıyorsa planlanmalıdır.
+8. Sığmayan test bekletilmelidir; sıradaki testler de
+   değerlendirilmeye devam edilmelidir.
+9. Bir test bölünerek veya kısmen çalıştırılmayacaktır.
+10. Planlanan testlerin toplam süresi başlangıç limitini aşamaz.
+11. Her testin durumu yalnızca bir grupta bulunmalıdır:
+    'planlanan', 'bekleyen' veya 'reddedilen'.
+
+============================================================
+4. YAZILIM GEREKSİNİMLERİ
+============================================================
+
+- Python kullanılmalıdır.
+- Nesne yönelimli programlama (OOP) zorunludur.
+- En az iki sınıf bulunmalıdır.
+- Test senaryosunun bilgilerini taşıyan yapı ile testlerin
+  planlanmasına karar veren yapı birbirinden ayrılmalıdır.
+- Koşullar, döngüler, fonksiyonlar ve standart Python veri
+  yapıları kullanılabilir.
+- Okunabilir sınıf, metot ve değişken isimleri kullanılmalıdır.
+- Sonuçlar metin olarak gösterilmelidir.
+
+Grafik arayüz, JSON, harici kütüphane, gerçek test otomasyonu,
+donanım bağlantısı ve dinamik yeniden planlama istenmez.
+
+============================================================
+5. ÖRNEK SENARYO
+============================================================
+
+Toplam kullanılabilir test süresi: 10 dakika
+
+T1: Öncelik 5, süre 6 dk, hazır
+T2: Öncelik 4, süre 5 dk, hazır
+T3: Öncelik 3, süre 4 dk, hazır
+T4: Öncelik 2, süre 2 dk, hazır değil
+
+Beklenen sonuç:
+
+Planlanan: T1, T3
+Bekleyen: T2
+Reddedilen: T4
+Kullanılan süre: 10 dakika
+Kalan süre: 0 dakika
+
+Açıklama: T1 seçilince 4 dakika kalır. T2 bu süreye sığmaz,
+ancak T3 sığar. T4 hazır olmadığı için reddedilir.
+
+============================================================
+6. EN AZ DÖRT TEST SENARYOSU
+============================================================
+
+1. Tüm hazır testlerin mevcut süreye sığdığı durum.
+2. Önceliği eşit iki testin geliş sırasının korunması.
+3. Uzun bir test beklerken kısa bir testin planlanabilmesi.
+4. Hazır olmayan, süresi geçersiz veya kimliği tekrar eden test.
+
+Her senaryoda beklenen sonucu ve programın ürettiği sonucu
+karşılaştır. Kullanılan süre ve kalan süreyi kontrol et.
+
+============================================================
+7. TESLİM VE DEĞERLENDİRME
+============================================================
+
+Teslim edilecekler:
+- Çalışan Python kaynak kodu.
+- En az dört farklı test senaryosu ve sonuçları.
+- Algoritmanın nasıl çalıştığını anlatan 5-10 satırlık açıklama.
+
+DEĞERLENDİRME (100 PUAN)
+- Algoritma doğruluğu ve karar akışı: 40 puan
+- OOP yapısı ve sınıf sorumlulukları: 20 puan
+- Kod okunabilirliği ve fonksiyon düzeni: 15 puan
+- Hata yönetimi ve dört test: 15 puan
+- Kısa algoritma açıklaması: 10 puan
+
+NOT: Görevin amacı karmaşık bir uygulama oluşturmak değil,
+Python kullanarak doğru, anlaşılır bir karar algoritması kurmaktır.
