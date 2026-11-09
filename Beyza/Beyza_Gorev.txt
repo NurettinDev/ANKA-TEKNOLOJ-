@@ -1,0 +1,115 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
+
+AD SOYAD: Beyza
+PROJE: Sensör Veri Kalite Kontrol Sistemi
+HEDEF ZORLUK: 5/10 (orta-alt, algoritma odaklı)
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün, toplam yaklaşık 8-15 saat
+SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+
+============================================================
+1) PROJENİN AMACI
+============================================================
+Deneme amaçlı bir sensör 0 ile 100 arasında ölçüm üretmesi gereken sayısal veriler gönderiyor. Ölçümler her zaman güvenilir olmayabilir. Geçerli verileri işlem önceliklerine ve işlem bütçesine göre değerlendiren bir Python sistemi tasarla.
+
+Bu, Python ve algoritmik problem çözme ödevidir. Kodunu nasıl
+kuracağına sen karar vereceksin. Hazır algoritma verilmiyor.
+
+============================================================
+2) KULLANILACAK BİLGİLER
+============================================================
+Her işlem/talep için aşağıdaki bilgiler ele alınmalı:
+Ölçüm kimliği, öncelik (1-5), işlem yükü (pozitif tam sayı), sensör değeri (sayı).
+
+Kapasite: Bir turda kullanılabilecek toplam veri işleme birimi.
+
+Tüm kayıtların benzersiz bir kimliği olmalı. Öncelik 1 ile 5
+arasında bir tam sayı olmalı (5 en yüksek öncelik). Süre/yük/
+miktar/alan gibi kapasite tüketen değerler pozitif tam sayı olmalı.
+Geçersiz veya tekrar eden kimlik, aralık dışı öncelik ve geçersiz
+kapasite tüketimi bilgisi olan kayıtlar reddedilmeli.
+
+============================================================
+3) ZORUNLU KARAR KURALLARI
+============================================================
+A. Uygunluk: Sensör değeri 0-100 aralığı dışında ise (sınırlar dahil), veri geçersizdir ve reddedilir. Sayı olmayan bir değer de geçersizdir.
+B. Sıralama: Uygun kayıtlarda önceliği yüksek olan önce değerlendirilir.
+C. Eşit öncelik: Sisteme önce eklenen kayıt önce değerlendirilir.
+D. Kapasite: Bir kayıt, kalan kapasiteye sığarsa kabul edilir;
+   aksi halde "bekleyen" durumuna alınır.
+E. Devam: Bir kayıt sığmadı diye işlemler bitmez. Sonraki uygun
+   kayıtlar da kontrol edilir.
+F. Hesap: Sadece kabul edilen kayıtlar kapasite kullanır;
+   kullanılan toplam kapasite asla başlangıç limitini aşamaz.
+G. Durumlar: Her kaydın sonucu 'kabul edildi / bekliyor / reddedildi'
+   kategorilerinden tam olarak biri olmalı. Bir kayıt iki durumda olamaz.
+
+Bu projede dinamik yeniden planlama, işlemi geri alma, internet,
+gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
+
+============================================================
+4) BEKLENEN YAZILIM YAPISI
+============================================================
+- Python temel konuları ve OOP kullanılacak.
+- En az iki sınıf bulunacak: kayıt/talep bilgisini tutan kısım ve
+  tüm kayıtları değerlendirip karar veren kısım birbirinden ayrılmalı.
+- Sınıflara ait anlamlı özellikler ve metotlar kullanılmalı.
+- Liste/sözlük gibi standart Python veri yapıları kullanılabilir.
+- Fonksiyon ve değişken isimleri anlaşılır olmalı.
+- Harici kütüphane, JSON veya grafik arayüz gerekli değil.
+- Örnek veriler program içerisinde tanımlanabilir; sonuçların
+  okunabilir metin olarak gösterilmesi yeterli.
+
+============================================================
+5) SONUÇ OLARAK NE GÖRMEK İSTİYORUZ?
+============================================================
+İşlenen ölçümler, kapasite nedeniyle bekleyenler, reddedilenler (gerekçeli) ve kalan işlem bütçesi.
+
+Örnek bir kayıt reddedilmisse nedenini kısa bir cumleyle açıkla.
+Sadece bir liste gösterip neden o sonuca ulaşıldığını gizleme.
+
+============================================================
+6) KONTROL İÇİN KÜÇÜK ÖRNEK
+============================================================
+Başlangıç kapasitesi: 8 işlem birimi
+Kayitlar (yazıldıkları sırayla):
+   S1 | öncelik 5 | yük 5 | ölçüm 75
+   S2 | öncelik 4 | yük 4 | ölçüm 20
+   S3 | öncelik 3 | yük 3 | ölçüm 95
+   S4 | öncelik 2 | yük 2 | ölçüm 130
+
+Beklenen karar:
+İşlenenler: S1, S3 | Bekleyen: S2 | Reddedilen: S4 | Kullanılan: 8 | Kalan: 0.
+
+Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
+
+============================================================
+7) EN AZ 4 TEST SENARYOSU
+============================================================
+   1. 0 ve 100 sınır değerleri geçerli kabul edilmeli.
+   2. Eşit öncelikli ölçümlerde ilk gelen önce değerlendirilmeli.
+   3. İşlem bütçesine sığmayan bir veri beklerken sonraki küçük veri işlenebilmeli.
+   4. 101 veya sayı olmayan ölçüm verisi reddedilmeli.
+
+Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
+uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
+
+============================================================
+8) TESLİM VE DEĞERLENDİRME
+============================================================
+Teslim edilecekler:
+- Kendi yazdığın çalışır Python kaynak kodu.
+- En az 4 farklı test durumu ve sonuclari.
+- Algoritmani kendi cümlelerinle anlatan kısa açıklama (5-10 satır).
+
+DEĞERLENDİRME ÖZETİ (100 PUAN)
+- Algoritma ve kuralların doğru uygulanması: 40 puan
+- OOP (sınıfların ve sorumluluklarin doğru kullanımı): 20 puan
+- Okunabilir kod ve düzenli fonksiyonlar: 15 puan
+- Hata kontrolu ve 4 test senaryosu: 15 puan
+- Kısa algoritma aciklamasi: 10 puan
+
+Burada veri kalitesini kontrol etme ile işlem sıralamasını birbirinden ayrı düşünmen bekleniyor.
+
+NOT: Bu dosya, önceki görevin yerine geçen yeni ve kolaylastirilmis
+sürümdür. Eski gorev dosyalarıyla birleştirilmemelidir.
