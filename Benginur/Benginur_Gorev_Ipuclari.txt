@@ -2,7 +2,7 @@
 
 AD: Benginur
 PROJE: Uçuş Görev Sıralama Sistemi
-SON TESLİM: 14 Aralık 2026
+SON TESLİM: 18 Ekim 2026, 18.00
 
 1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
 
