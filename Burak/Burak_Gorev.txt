@@ -92,21 +92,9 @@ Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
 uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
 
 
-8) TESLİM VE DEĞERLENDİRME
+8) TESLİM
 
 Teslim edilecekler:
 - Kendi yazdığın çalışır Python kaynak kodu.
 - En az 4 farklı test durumu ve sonuclari.
 - Algoritmani kendi cümlelerinle anlatan kısa açıklama (5-10 satır).
-
-DEĞERLENDİRME ÖZETİ (100 PUAN)
-- Algoritma ve kuralların doğru uygulanması: 40 puan
-- OOP (sınıfların ve sorumluluklarin doğru kullanımı): 20 puan
-- Okunabilir kod ve düzenli fonksiyonlar: 15 puan
-- Hata kontrolu ve 4 test senaryosu: 15 puan
-- Kısa algoritma aciklamasi: 10 puan
-
-Önemli olan stok muhasebesini ve kararların gerekçelerini tutarlı tutmak; bir alışveriş uygulaması geliştirmek değil.
-
-NOT: Bu dosya, önceki görevin yerine geçen yeni ve kolaylastirilmis
-sürümdür. Eski gorev dosyalarıyla birleştirilmemelidir.
