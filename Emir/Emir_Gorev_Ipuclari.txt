@@ -1,0 +1,78 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
+
+AD SOYAD: Emir
+PROJE: Akıllı Telemetri Paket Yöneticisi
+SON TESLİM: 14 Aralık 2026
+ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
+
+============================================================
+1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
+============================================================
+Elindeki tek bir kayıt hangi bilgileri taşımalı?
+Kayıtların hepsi hangi ortak kurallara göre seçilecek?
+En sonunda hangi üç grubu açıkça göstermelisin?
+
+Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
+Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
+
+============================================================
+2) SINIFLARIN SORUMLULUKLARINI AYIR
+============================================================
+Bir sınıf paket özelliklerini, ikinci sınıf iletim turunu ve paket seçimini yönetecek biçimde düzenlenebilir.
+
+Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
+ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
+sorumlulukları anlaşılır şekilde paylaştır.
+
+============================================================
+3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
+============================================================
+- Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
+  Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
+- Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
+- Öncelik 5, öncelik 1'den daha önce değerlendirilmelidir.
+- Eşit öncelikte ilk gelenin önce değerlendirilmesi unutulmamalı.
+- Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
+- Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
+
+============================================================
+4) BU PROJEYE ÖZEL İPUÇLARI
+============================================================
+1. Bir paketin boyutu kalan kapasiteden büyükse “bekleyen” olarak ayır; bu paketi atlamak başka paketleri göndermene engel olmamalı.
+
+2. Öncelik ile paket boyutunu karıştırma: önce öncelik sırasını kurduktan sonra kapasite kontrolü yapman gerekir.
+
+3. Doğrulanmamış paketleri iletim hesabına dahil etmek sonuçları yanlış yapar. Hangi adımda ayıklanacaklarına karar ver.
+
+============================================================
+5) HATA AYIKLAMA İÇİN 4 SORU
+============================================================
+1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
+2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
+3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
+4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
+   yalnızca bir listede mi bulunuyor?
+
+============================================================
+6) TEST FİKİRLERİ
+============================================================
+   1. Doğrulanan ve toplam boyutu yeterli paketler gönderilmeli.
+   2. Önceliği aynı olan paketlerin geliş sırası korunmalı.
+   3. Büyük paket beklerken küçük bir paket gönderilebilmeli.
+   4. Doğrulanmamış veya boyutu sıfır olan paket reddedilmeli.
+
+============================================================
+7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
+============================================================
+Gerçek ağ iletişimi, MAVLink protokolü, soket programlama, paket kaybı simülasyonu ve zamanlayıcılar istenmiyor. Bu yalnızca veri paketlerini seçme problemidir.
+
+Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
+beklenmiyor. Kendi karar mantığını kurman ve neden doğru çalıştığını
+göstermen yeterli.
+
+İPUCU: Kısa, okunabilir ve doğru çalışan bir çözüm; gereksiz yere
+büyütülmüş bir projeden daha değerlidir.
+
+NOT: Bu ipuçları yalnızca aynı isimli YENİ 'Görev.txt' dosyası
+için hazırlanmıştır; eski sürümün ipuçlarıyla karıştırma.
