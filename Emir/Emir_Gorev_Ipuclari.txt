@@ -63,9 +63,3 @@ Gerçek ağ iletişimi, MAVLink protokolü, soket programlama, paket kaybı sim�
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
 beklenmiyor. Kendi karar mantığını kurman ve neden doğru çalıştığını
 göstermen yeterli.
-
-İPUCU: Kısa, okunabilir ve doğru çalışan bir çözüm; gereksiz yere
-büyütülmüş bir projeden daha değerlidir.
-
-NOT: Bu ipuçları yalnızca aynı isimli YENİ 'Görev.txt' dosyası
-için hazırlanmıştır; eski sürümün ipuçlarıyla karıştırma.
