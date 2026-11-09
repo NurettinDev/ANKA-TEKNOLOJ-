@@ -1,0 +1,58 @@
+ANKA TEKNOLOJİ
+MAHMUT - GÖREV İPUÇLARI
+
+PROJE: İHA Görüntü Veri Seti İnceleme Planlayıcısı
+ZORLUK: 5/10
+SON TESLİM: 13 Kasım 2026 Cuma, 23.59
+
+1. ÖNCE VERİYİ TASARLA
+
+Bir görüntü grubunu temsil eden nesnenin hangi özelliklere sahip olması
+gerektiğini düşün. Kimlik, öncelik, süre ve hazırlık durumu birbirinden
+farklı bilgilerdir.
+
+2. SINIFLARIN SORUMLULUKLARINI AYIR
+
+Bir sınıf tek bir inceleme talebinin bilgilerini tutabilir. Başka bir sınıf
+ise tüm talepleri inceleyip planlama kararı verebilir. Böylece programın
+bölümleri daha anlaşılır olur.
+
+3. DOĞRULAMAYI PLANLAMADAN AYRI DÜŞÜN
+
+Hazır olmayan veya geçersiz değerler içeren gruplar, süre hesabına
+katılmamalıdır. Bir grubun geçersiz olmasıyla geçerli fakat süreye
+sığmaması aynı durum değildir.
+
+4. ÖNCELİK VE SIRA İLİŞKİSİNİ KUR
+
+Yüksek öncelik önce değerlendirilir. Eşit önceliklerde sisteme giriş
+sırası korunmalıdır. Python'un sıralama yöntemlerini inceleyebilirsin.
+
+5. KALAN SÜREYİ TAKİP ET
+
+Bir grubu planladığında kalan inceleme süresi azalır. Bir grup süreye
+sığmazsa sıradaki grupları incelemeye devam etmelisin; daha kısa bir grup
+kalan süreye sığabilir.
+
+6. SONUÇLARI NET AYIR
+
+Planlanan, bekleyen ve reddedilen grupların neden bu kategoride olduğunu
+kendi algoritmanla açıklayabilmelisin. Aynı grup iki sonuçta bulunmamalı.
+
+KENDİNE SOR:
+
+- Toplam inceleme süresi 0 dakika olursa sonuç ne olur?
+- İki grup aynı öncelikteyse hangisi önce değerlendirilir?
+- İlk grup kalan süreden uzunsa diğer gruplar yine incelenir mi?
+- Aynı kimliğe sahip ikinci kayıt nasıl ele alınmalı?
+- Hazır olmayan grup zaman bütçesini azaltır mı?
+- Seçilen sürelerle kalan sürenin toplamı başlangıç süresine eşit mi?
+
+GENEL İPUCU:
+
+Önce örnek dört grubu kâğıt üzerinde tek tek değerlendirerek nasıl karar
+vereceğini belirle. Sonra bu kararları küçük, anlaşılır fonksiyonlara ve
+OOP yapısına dönüştür. Hazır çözümü ezberlemek yerine neden o kararın
+verildiğini açıklayabildiğinden emin ol.
+
+Bu belge algoritmanın düşünülüşüne yardımcı olur; hazır Python çözümü içermez.

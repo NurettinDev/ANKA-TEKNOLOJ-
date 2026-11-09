@@ -1,0 +1,103 @@
+ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJE GÖREVİ
+
+AD: Mahmut
+PROJE: İHA Görüntü Veri Seti İnceleme Planlayıcısı
+ZORLUK: 5/10 (Orta-alt seviye)
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün
+SON TESLİM: 13 Kasım 2026 Cuma, 23.59
+
+1. PROJENİN AMACI
+
+Bir İHA projesinde görüntü işleme çalışmalarına ait farklı görüntü grupları
+bulunmaktadır. Bu gruplar, eğitimde kullanılmadan önce insan tarafından
+incelenmelidir. Ancak inceleme ekibinin ayırabileceği toplam süre sınırlıdır.
+
+Görevin, inceleme taleplerinin önceliğini, süre ihtiyacını ve uygunluğunu
+değerlendirerek hangi görüntü gruplarının inceleneceğini planlayan bir Python
+yazılımı geliştirmektir.
+
+Bu ödevde görüntü işleme, fotoğraf açma veya yapay zekâ modeli kullanma
+istenmemektedir. Yalnızca verilen kayıtlarla çalışan bir planlama algoritması
+oluşturulacaktır.
+
+2. GÖRÜNTÜ GRUBU BİLGİLERİ
+
+Her inceleme talebi şu bilgileri içermelidir:
+
+- Benzersiz grup kimliği
+- Öncelik derecesi (1-5; 5 en yüksek)
+- Tahmini inceleme süresi (pozitif tam sayı, dakika)
+- Veri hazırlık durumu (hazır / hazır değil)
+
+Ayrıca toplam kullanılabilir inceleme süresi tanımlanmalıdır.
+
+3. ALGORİTMA KURALLARI
+
+- Hazır olmayan gruplar reddedilmelidir.
+- Öncelik değeri 1-5 dışında olan talepler reddedilmelidir.
+- Sıfır veya negatif inceleme süresi olan talepler reddedilmelidir.
+- Tekrarlanan grup kimliğine sahip sonraki talepler reddedilmelidir.
+- Geçerli talepler yüksek öncelikten düşük önceliğe doğru değerlendirilmelidir.
+- Eşit öncelikte sisteme önce eklenen grup önce değerlendirilmelidir.
+- Seçilen grupların toplam inceleme süresi mevcut süreyi aşmamalıdır.
+- Kalan süreye sığmayan grup bekletilmelidir; sonraki gruplar yine
+  değerlendirilmelidir.
+- Grup incelemesi bölünmez: bir grup tamamen seçilir ya da bekletilir.
+- Her grup yalnızca bir sonuç kategorisinde bulunmalıdır:
+  Planlanan / Bekleyen / Reddedilen.
+
+4. YAZILIM GEREKSİNİMLERİ
+
+- Programlama dili Python'dur.
+- Nesne yönelimli programlama (OOP) kullanılmalıdır.
+- En az iki sınıf bulunmalıdır.
+- Veri kaydı ile planlama kararını veren yapı farklı sorumluluklara sahip olmalıdır.
+- Koşullar, döngüler, listeler veya sözlükler kullanılabilir.
+- Çıktıda planlanan, bekleyen ve reddedilen grup kimlikleri ile kullanılan
+  ve kalan süre açıkça gösterilmelidir.
+- Grafik arayüz, JSON, veritabanı, harici kütüphane ve gerçek görüntü dosyası
+  işleme gerekmemektedir.
+
+5. ÖRNEK SENARYO
+
+Toplam inceleme süresi: 10 dakika
+
+M1: Öncelik 5, süre 6 dk, hazır
+M2: Öncelik 4, süre 5 dk, hazır
+M3: Öncelik 3, süre 4 dk, hazır
+M4: Öncelik 2, süre 2 dk, hazır değil
+
+Beklenen sonuç:
+
+Planlanan: M1, M3
+Bekleyen: M2
+Reddedilen: M4
+Kullanılan süre: 10 dakika
+Kalan süre: 0 dakika
+
+6. TESTLER
+
+En az dört farklı senaryo gösterilmelidir:
+
+- Tüm geçerli grupların inceleme süresine sığması
+- Aynı önceliğe sahip iki grubun doğru sırayla değerlendirilmesi
+- Büyük bir grup beklerken daha kısa grubun planlanabilmesi
+- Hazır olmayan veya geçersiz süreye sahip grupların reddedilmesi
+
+7. TESLİM
+
+- Çalışan Python kaynak kodu
+- En az dört test senaryosunun sonuçları
+- Algoritmanın nasıl karar verdiğini anlatan 5-10 satırlık açıklama
+
+DEĞERLENDİRME (100 PUAN)
+
+Algoritma doğruluğu: 40
+OOP kullanımı: 20
+Kod okunabilirliği ve fonksiyon düzeni: 15
+Hata kontrolü ve testler: 15
+Algoritma açıklaması: 10
+
+NOT: Görevin amacı arayüz tasarlamak değil; Python, OOP ve algoritmik düşünme
+becerilerini ölçmektir. Proje VS Code gibi bir editörde yazılabilir.
