@@ -67,4 +67,3 @@ Gerçek bakım kılavuzu, arıza teşhisi ve parçaların birbirine bağımlıl�
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
 beklenmiyor. Kendi karar mantığını kurman ve neden doğru çalıştığını
 göstermen yeterli.
-
