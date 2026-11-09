@@ -1,0 +1,129 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL C++ PROJE GÖREVİ
+
+PROJE: İHA Sensör Alarm İşleme Yöneticisi
+PROGRAMLAMA DİLİ: C++ (C++17)
+ZORLUK: 5/10
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün
+SON TESLİM: 13 Kasım 2026 Cuma, 23.59
+
+1. PROJENİN AMACI
+
+Bir İHA'dan gelen farklı sensör ölçümleri kontrol edilecektir.
+Her ölçüm için kabul edilen alt ve üst sınır tanımlıdır.
+
+Ölçüm sınırların içindeyse NORMAL, sınırların dışındaysa ALARM
+olarak değerlendirilecektir. Yer istasyonunun alarm incelemesine
+ayırabileceği toplam süre sınırlıdır.
+
+Görevin, ölçümleri doğrulayan, alarmları önceliğine göre sıralayan,
+süreye sığanları işleyen ve sonuçları raporlayan bir C++ programı
+geliştirmektir.
+
+2. GEREKLİ VERİLER
+
+Her sensör ölçümü:
+- Benzersiz sensör ölçüm kimliği
+- Sensör adı
+- Ölçüm değeri (sayısal)
+- Alt sınır ve üst sınır (sayısal)
+- Öncelik derecesi (1-5; 5 en yüksek)
+- Alarm inceleme süresi (pozitif tam sayı, dakika)
+
+Sistem:
+- Toplam kullanılabilir alarm inceleme süresi (dakika)
+
+Örnek ölçümler program içinde tanımlanabilir.
+Kullanıcıdan veri almak zorunlu değildir.
+
+3. ALGORİTMA KURALLARI
+
+A. Önce geçerlilik kontrolü yap:
+- Kimlik boş olamaz.
+- Aynı kimlik ikinci kez kabul edilmez; ilk kayıt geçerli kalır.
+- Alt sınır üst sınırdan küçük olmalıdır.
+- Öncelik 1-5 arasında olmalıdır.
+- İnceleme süresi pozitif tam sayı olmalıdır.
+- Geçersiz kayıt REDDEDİLDİ olarak raporlanmalıdır.
+
+B. Geçerli ölçümleri sınıflandır:
+- Alt sınır <= ölçüm <= üst sınır: NORMAL
+- Ölçüm < alt sınır veya ölçüm > üst sınır: ALARM
+- NORMAL ölçümler inceleme süresi tüketmez.
+
+C. ALARM ölçümlerini işle:
+- Önceliği daha yüksek olan alarm önce değerlendirilir.
+- Eşit öncelikte ilk eklenen alarm önce değerlendirilir.
+- Bir alarmın inceleme süresi kalan süreye sığıyorsa İŞLENDİ.
+- Sığmıyorsa BEKLİYOR; sonraki alarmlar yine değerlendirilir.
+- Alarm incelemesi bölünemez.
+- Toplam kullanılan süre sınırı aşamaz.
+
+D. Sonuç raporu üret:
+- İŞLENDİ alarmlar
+- BEKLİYOR alarmlar
+- NORMAL ölçümler
+- REDDEDİLDİ kayıtlar (reddedilme gerekçesiyle)
+- Kullanılan ve kalan inceleme süresi
+
+4. C++ VE OOP GEREKSİNİMLERİ
+
+- Yalnızca C++ kullanılacak; Python kodu kabul edilmeyecek.
+- En az iki sınıf (class) kullanılacak.
+- Sınıflarda constructor ve üye fonksiyonlar bulunacak.
+- Encapsulation uygulanacak; uygun veriler private tutulacak.
+- Nesneler arasındaki sorumluluklar ayrılacak.
+- if/else, for/while, fonksiyonlar, std::string ve std::vector
+  gibi OOP öncesi temel C++ konuları kullanılabilecek.
+- Sıralama için std::sort / std::stable_sort kullanılabilir;
+  elle yazılan doğru bir sıralama algoritması da kabul edilir.
+- Yalnızca C++ standart kütüphanesi kullanılacak.
+
+Grafik arayüz, JSON, veritabanı, gerçek sensör bağlantısı,
+MAVLink, ROS veya harici kütüphane istenmemektedir.
+Çıktı konsolda metin olarak gösterilebilir.
+
+5. ÖRNEK SENARYO
+
+Toplam inceleme süresi: 7 dakika
+
+S1: Motor,     değer 105, alt 20, üst 90,  öncelik 5, süre 4
+S2: Batarya,   değer 9,   alt 11, üst 15,  öncelik 4, süre 5
+S3: Sinyal,    değer 15,  alt 30, üst 90,  öncelik 3, süre 3
+S4: İrtifa,    değer 40,  alt 0,  üst 100, öncelik 4, süre 2
+S5: Hatalı,    değer 25,  alt 30, üst 20,  öncelik 2, süre 1
+
+BEKLENEN SONUÇ:
+İŞLENDİ: S1, S3
+BEKLİYOR: S2
+NORMAL: S4
+REDDEDİLDİ: S5 (alt sınır üst sınırdan küçük değil)
+KULLANILAN SÜRE: 7 dakika
+KALAN SÜRE: 0 dakika
+
+Not: S4 normal olduğu için inceleme süresinden düşülmez.
+
+6. EN AZ DÖRT TEST
+
+1) Tüm alarmların mevcut süreye sığması
+2) Ölçüm değerinin tam alt veya üst sınıra eşit olması
+3) Aynı kimlik, hatalı sınır veya geçersiz öncelik
+4) Büyük bir alarm beklerken daha küçük alarmların işlenmesi;
+   eşit öncelikte kayıt sırasının korunması
+
+7. TESLİM
+
+- Çalışan C++ kaynak kodu
+- En az dört testin sonucu
+- Kullanılan sınıfları ve algoritma akışını açıklayan
+  kısa, 5-10 satırlık not
+
+DEĞERLENDİRME (100 PUAN)
+Algoritma doğruluğu: 40
+OOP ve sınıf tasarımı: 20
+C++ kod düzeni: 15
+Hata kontrolü ve testler: 15
+Kısa açıklama: 10
+
+AMAÇ: Hazır çözüm kullanmadan, C++ temel bilgileri ve OOP ile
+doğru karar veren bir yazılım geliştirmektir.

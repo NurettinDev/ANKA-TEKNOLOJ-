@@ -1,0 +1,81 @@
+﻿ANKA TEKNOLOJİ
+C++ PROJESİ - GÖREV İPUÇLARI
+
+PROJE: İHA Sensör Alarm İşleme Yöneticisi
+ZORLUK: 5/10
+
+1. ÖNCE ALGORİTMAYI PARÇALA
+
+Bütün işi tek bir fonksiyonda çözmeye çalışma.
+Şu aşamaları ayrı ayrı düşün:
+- Veri doğrulama
+- Ölçümün NORMAL/ALARM olarak sınıflandırılması
+- ALARM kayıtlarının önceliklendirilmesi
+- Süreye göre işleme veya bekletme kararı
+- Sonuç raporu
+
+2. OOP TASARIMI
+
+Bir sınıf tek bir ölçümün bilgilerini saklayabilir.
+Başka bir sınıf ölçüm listesini ve işlem süresini yönetebilir.
+
+Hangi bilgilerin private olması gerektiğini düşün.
+Constructor sayesinde nesnelerin başlangıç durumunu
+nasıl oluşturabileceğini araştır.
+
+Bir sınıfın tüm sorumlulukları üstlenmesi gerekmiyor.
+
+3. C++ İÇİN ARAŞTIRABİLECEĞİN KONULAR
+
+- class, public, private, constructor
+- Üye fonksiyonlar ve const doğruluk
+- std::vector ile birden fazla nesne tutmak
+- std::string ile isim ve kimlik saklamak
+- Döngüler ile kayıtları tek tek kontrol etmek
+- std::sort / std::stable_sort veya basit sıralama
+- Fonksiyon parametrelerinde const referans kullanımı
+
+Bunların hepsini kullanman şart değil; doğru ve sade
+bir çözüm kurman daha önemli.
+
+4. ÖNCELİK VE SÜREYE DİKKAT
+
+NORMAL olan ölçüm alarm inceleme süresi tüketmez.
+ALARM olanların hepsini hemen işleme alma.
+Önce sıralama kuralını uygula, sonra kalan süreyi kontrol et.
+
+Bir alarm süreye sığmıyorsa onu BEKLİYOR olarak ayır.
+Bu, diğer alarmları kontrol etmeyi bırakman anlamına gelmez.
+
+5. SINIR DURUMLARI
+
+Ölçüm alt sınıra eşitse NORMAL mi?
+Ölçüm üst sınıra eşitse NORMAL mi?
+Alt sınır üst sınırdan büyükse ne yapılmalı?
+Kullanılabilir süre sıfırsa ne olacak?
+İlk iki ölçüm aynı kimliğe sahipse hangisi kalacak?
+Öncelikler aynıysa geliş sırası nasıl korunacak?
+Her kayıt yalnızca tek bir sonuç kategorisine mi giriyor?
+
+6. KENDİNİ TEST ET
+
+Kod yazmadan önce örnek veriler için sonucu kağıtta bul.
+Sonra programın çıktısını bu sonuçla karşılaştır.
+
+Kontrol:
+- İŞLENDİ alarmlarının süreleri toplamı kapasiteyi aşıyor mu?
+- NORMAL ve REDDEDİLDİ kayıtlar süre tüketiyor mu?
+- BEKLİYOR kayıtları raporda görünüyor mu?
+- Eşit öncelikte sıra bozuluyor mu?
+
+7. KÜÇÜK BİR MÜHENDİSLİK İPUCU
+
+Önce az sayıda ölçümle doğru çalışan bir sistem geliştir.
+Sonra geçersiz kayıtları, eşit önceliği ve kapasite
+sınırını ekleyerek testlerini genişlet.
+
+Karmaşık kod değil; anlaşılır sınıflar, doğrulanabilir
+algoritma ve doğru sonuç beklenmektedir.
+
+NOT: Bu dosya algoritmanın hazır çözümünü içermez.
+Uygulama tamamen C++ ile geliştirilmelidir.
