@@ -1,23 +1,20 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
 
 AD SOYAD: Burak
 PROJE: Laboratuvar Kaynak Dağıtım Sistemi
-HEDEF ZORLUK: 5/10 (orta-alt, algoritma odaklı)
-HEDEF ÇALIŞMA SÜRESİ: 4-5 gün, toplam yaklaşık 8-15 saat
 SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
 
-============================================================
+
 1) PROJENİN AMACI
-============================================================
+
 ANKA Teknoloji laboratuvarında ortak kullanılan tek bir tür sarf malzemesinden sınırlı stok var. Takım üyelerinden gelen taleplere, önceliklerine ve yetki durumlarına göre stok paylaştıran küçük bir simülasyon tasarla.
 
 Bu, Python ve algoritmik problem çözme ödevidir. Kodunu nasıl
 kuracağına sen karar vereceksin. Hazır algoritma verilmiyor.
 
-============================================================
+
 2) KULLANILACAK BİLGİLER
-============================================================
+
 Her işlem/talep için aşağıdaki bilgiler ele alınmalı:
 Talep kimliği, öncelik (1-5), istenen miktar (pozitif tam sayı), talep yetkisi (yetkili/yetkisiz).
 
@@ -29,9 +26,9 @@ miktar/alan gibi kapasite tüketen değerler pozitif tam sayı olmalı.
 Geçersiz veya tekrar eden kimlik, aralık dışı öncelik ve geçersiz
 kapasite tüketimi bilgisi olan kayıtlar reddedilmeli.
 
-============================================================
+
 3) ZORUNLU KARAR KURALLARI
-============================================================
+
 A. Uygunluk: Yetkisiz talepler reddedilir; bunlar stoktan hiçbir şey tüketmez.
 B. Sıralama: Uygun kayıtlarda önceliği yüksek olan önce değerlendirilir.
 C. Eşit öncelik: Sisteme önce eklenen kayıt önce değerlendirilir.
@@ -47,9 +44,9 @@ G. Durumlar: Her kaydın sonucu 'kabul edildi / bekliyor / reddedildi'
 Bu projede dinamik yeniden planlama, işlemi geri alma, internet,
 gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
 
-============================================================
+
 4) BEKLENEN YAZILIM YAPISI
-============================================================
+
 - Python temel konuları ve OOP kullanılacak.
 - En az iki sınıf bulunacak: kayıt/talep bilgisini tutan kısım ve
   tüm kayıtları değerlendirip karar veren kısım birbirinden ayrılmalı.
@@ -60,17 +57,17 @@ gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
 - Örnek veriler program içerisinde tanımlanabilir; sonuçların
   okunabilir metin olarak gösterilmesi yeterli.
 
-============================================================
+
 5) SONUÇ OLARAK NE GÖRMEK İSTİYORUZ?
-============================================================
+
 Karşılanan, bekleyen ve reddedilen talep kimlikleri, her kategori için kısa gerekçe, dağıtılan ve kalan stok.
 
 Örnek bir kayıt reddedilmisse nedenini kısa bir cumleyle açıkla.
 Sadece bir liste gösterip neden o sonuca ulaşıldığını gizleme.
 
-============================================================
+
 6) KONTROL İÇİN KÜÇÜK ÖRNEK
-============================================================
+
 Başlangıç kapasitesi: 7 stok birimi
 Kayitlar (yazıldıkları sırayla):
    B1 | öncelik 5 | miktar 5 | yetkili
@@ -83,9 +80,9 @@ Karşılananlar: B1, B3 | Bekleyen: B2 | Reddedilen: B4 | Dağıtılan: 7 | Kala
 
 Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
 
-============================================================
+
 7) EN AZ 4 TEST SENARYOSU
-============================================================
+
    1. Tüm talepler yetkili ve toplam miktar yeterli: hepsi karşılanmalı.
    2. Eşit öncelikli iki talepte ilk kaydedilen önce değerlendirilmeli.
    3. Büyük talep beklerken daha küçük talep kalan stoğu kullanabilmeli.
@@ -94,9 +91,9 @@ Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
 Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
 uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
 
-============================================================
+
 8) TESLİM VE DEĞERLENDİRME
-============================================================
+
 Teslim edilecekler:
 - Kendi yazdığın çalışır Python kaynak kodu.
 - En az 4 farklı test durumu ve sonuclari.
