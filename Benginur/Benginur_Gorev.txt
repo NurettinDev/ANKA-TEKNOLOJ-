@@ -2,7 +2,7 @@
 
 AD SOYAD: Benginur
 PROJE: Uçuş Görev Sıralama Sistemi
-SON TESLİM: 14 Ekim 2026 Cumartesi, 18.00
+SON TESLİM: 14 Kasım 2026 Cumartesi, 18.00
 
 
 1) PROJENİN AMACI
