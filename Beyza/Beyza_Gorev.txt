@@ -2,7 +2,7 @@
 
 AD SOYAD: Beyza
 PROJE: Sensör Veri Kalite Kontrol Sistemi
-SON TESLİM: 14 Kasım 2026 Cumartesi, 18.00
+SON TESLİM: 13 Kasım 2026 Cuma, 23.59
 
 
 1) PROJENİN AMACI
