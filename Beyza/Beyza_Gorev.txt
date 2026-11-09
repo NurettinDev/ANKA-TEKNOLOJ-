@@ -1,5 +1,4 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
 
 AD SOYAD: Beyza
 PROJE: Sensör Veri Kalite Kontrol Sistemi
