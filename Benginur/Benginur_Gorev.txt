@@ -1,0 +1,115 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
+
+AD SOYAD: Benginur
+PROJE: Uçuş Görev Sıralama Sistemi
+HEDEF ZORLUK: 5/10 (orta-alt, algoritma odaklı)
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün, toplam yaklaşık 8-15 saat
+SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+
+============================================================
+1) PROJENİN AMACI
+============================================================
+Bir İHA için birden fazla görev tanımlanıyor; ancak bir uçuş için ayrılmış toplam süre sınırlı. Görevleri önceliğe ve uçuşa uygunluk durumuna göre değerlendirerek hangilerinin bu uçuşa alınacağını belirleyen simülasyon geliştir.
+
+Bu, Python ve algoritmik problem çözme ödevidir. Kodunu nasıl
+kuracağına sen karar vereceksin. Hazır algoritma verilmiyor.
+
+============================================================
+2) KULLANILACAK BİLGİLER
+============================================================
+Her işlem/talep için aşağıdaki bilgiler ele alınmalı:
+Görev kimliği, öncelik (1-5), tahmini süre (pozitif tam sayı, dakika), uçuşa uygunluk (uygun/uygun değil).
+
+Kapasite: Bu uçuş için ayrılan toplam dakika.
+
+Tüm kayıtların benzersiz bir kimliği olmalı. Öncelik 1 ile 5
+arasında bir tam sayı olmalı (5 en yüksek öncelik). Süre/yük/
+miktar/alan gibi kapasite tüketen değerler pozitif tam sayı olmalı.
+Geçersiz veya tekrar eden kimlik, aralık dışı öncelik ve geçersiz
+kapasite tüketimi bilgisi olan kayıtlar reddedilmeli.
+
+============================================================
+3) ZORUNLU KARAR KURALLARI
+============================================================
+A. Uygunluk: Uçuşa uygun olmayan görevler reddedilir.
+B. Sıralama: Uygun kayıtlarda önceliği yüksek olan önce değerlendirilir.
+C. Eşit öncelik: Sisteme önce eklenen kayıt önce değerlendirilir.
+D. Kapasite: Bir kayıt, kalan kapasiteye sığarsa kabul edilir;
+   aksi halde "bekleyen" durumuna alınır.
+E. Devam: Bir kayıt sığmadı diye işlemler bitmez. Sonraki uygun
+   kayıtlar da kontrol edilir.
+F. Hesap: Sadece kabul edilen kayıtlar kapasite kullanır;
+   kullanılan toplam kapasite asla başlangıç limitini aşamaz.
+G. Durumlar: Her kaydın sonucu 'kabul edildi / bekliyor / reddedildi'
+   kategorilerinden tam olarak biri olmalı. Bir kayıt iki durumda olamaz.
+
+Bu projede dinamik yeniden planlama, işlemi geri alma, internet,
+gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
+
+============================================================
+4) BEKLENEN YAZILIM YAPISI
+============================================================
+- Python temel konuları ve OOP kullanılacak.
+- En az iki sınıf bulunacak: kayıt/talep bilgisini tutan kısım ve
+  tüm kayıtları değerlendirip karar veren kısım birbirinden ayrılmalı.
+- Sınıflara ait anlamlı özellikler ve metotlar kullanılmalı.
+- Liste/sözlük gibi standart Python veri yapıları kullanılabilir.
+- Fonksiyon ve değişken isimleri anlaşılır olmalı.
+- Harici kütüphane, JSON veya grafik arayüz gerekli değil.
+- Örnek veriler program içerisinde tanımlanabilir; sonuçların
+  okunabilir metin olarak gösterilmesi yeterli.
+
+============================================================
+5) SONUÇ OLARAK NE GÖRMEK İSTİYORUZ?
+============================================================
+Uçuşa alınan görevler, süre yetmediği için bekletilenler, reddedilenler ve toplam kullanılan/kalan süre.
+
+Örnek bir kayıt reddedilmisse nedenini kısa bir cumleyle açıkla.
+Sadece bir liste gösterip neden o sonuca ulaşıldığını gizleme.
+
+============================================================
+6) KONTROL İÇİN KÜÇÜK ÖRNEK
+============================================================
+Başlangıç kapasitesi: 10 dakika
+Kayitlar (yazıldıkları sırayla):
+   G1 | öncelik 5 | süre 6 dk | uygun
+   G2 | öncelik 4 | süre 5 dk | uygun
+   G3 | öncelik 4 | süre 4 dk | uygun
+   G4 | öncelik 2 | süre 2 dk | uygun değil
+
+Beklenen karar:
+Uçuşa alınanlar: G1, G3 | Bekleyen: G2 | Reddedilen: G4 | Kullanılan: 10 dk | Kalan: 0 dk.
+
+Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
+
+============================================================
+7) EN AZ 4 TEST SENARYOSU
+============================================================
+   1. Tüm görevler uygun ve süre toplamı limitin altında: hepsi kabul edilmeli.
+   2. Eşit öncelikli görevlerin eklenme sırası korunmalı.
+   3. Uzun bir görev beklerken daha kısa sonraki görev uçuşa alınabilmeli.
+   4. Uçuşa uygun olmayan veya süresi sıfır olan görev reddedilmeli.
+
+Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
+uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
+
+============================================================
+8) TESLİM VE DEĞERLENDİRME
+============================================================
+Teslim edilecekler:
+- Kendi yazdığın çalışır Python kaynak kodu.
+- En az 4 farklı test durumu ve sonuclari.
+- Algoritmani kendi cümlelerinle anlatan kısa açıklama (5-10 satır).
+
+DEĞERLENDİRME ÖZETİ (100 PUAN)
+- Algoritma ve kuralların doğru uygulanması: 40 puan
+- OOP (sınıfların ve sorumluluklarin doğru kullanımı): 20 puan
+- Okunabilir kod ve düzenli fonksiyonlar: 15 puan
+- Hata kontrolu ve 4 test senaryosu: 15 puan
+- Kısa algoritma aciklamasi: 10 puan
+
+Bu problemde amaç rota bulmak değil, basit kısıtlar altında kararlı bir görev listesi oluşturmaktır.
+
+NOT: Bu dosya, önceki görevin yerine geçen yeni ve kolaylastirilmis
+sürümdür. Eski gorev dosyalarıyla birleştirilmemelidir.
