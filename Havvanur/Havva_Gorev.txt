@@ -1,0 +1,115 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJE GÖREVİ | YENİ / KOLAYLAŞTIRILMIŞ SÜRÜM
+
+AD SOYAD: Havva
+PROJE: Yer İstasyonu Kayıt İşleyicisi
+HEDEF ZORLUK: 5/10 (orta-alt, algoritma odaklı)
+HEDEF ÇALIŞMA SÜRESİ: 4-5 gün, toplam yaklaşık 8-15 saat
+SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
+
+============================================================
+1) PROJENİN AMACI
+============================================================
+İHA yer istasyonunda kısa sistem kayıtları oluşuyor. Yer istasyonu aynı turda yalnızca sınırlı miktarda kaydı işleyebiliyor. Kayıtların hangilerinin işleneceğini belirleyen küçük bir simülasyon oluştur.
+
+Bu, Python ve algoritmik problem çözme ödevidir. Kodunu nasıl
+kuracağına sen karar vereceksin. Hazır algoritma verilmiyor.
+
+============================================================
+2) KULLANILACAK BİLGİLER
+============================================================
+Her işlem/talep için aşağıdaki bilgiler ele alınmalı:
+Kayıt kimliği, öncelik (1-5), işlem yükü (pozitif tam sayı), bütünlük kontrolü (sağlam/bozuk).
+
+Kapasite: Bir turda kullanılabilecek en yüksek işlem yükü.
+
+Tüm kayıtların benzersiz bir kimliği olmalı. Öncelik 1 ile 5
+arasında bir tam sayı olmalı (5 en yüksek öncelik). Süre/yük/
+miktar/alan gibi kapasite tüketen değerler pozitif tam sayı olmalı.
+Geçersiz veya tekrar eden kimlik, aralık dışı öncelik ve geçersiz
+kapasite tüketimi bilgisi olan kayıtlar reddedilmeli.
+
+============================================================
+3) ZORUNLU KARAR KURALLARI
+============================================================
+A. Uygunluk: Bütünlük kontrolü bozuk olan kayıtlar işlenemez ve reddedilir.
+B. Sıralama: Uygun kayıtlarda önceliği yüksek olan önce değerlendirilir.
+C. Eşit öncelik: Sisteme önce eklenen kayıt önce değerlendirilir.
+D. Kapasite: Bir kayıt, kalan kapasiteye sığarsa kabul edilir;
+   aksi halde "bekleyen" durumuna alınır.
+E. Devam: Bir kayıt sığmadı diye işlemler bitmez. Sonraki uygun
+   kayıtlar da kontrol edilir.
+F. Hesap: Sadece kabul edilen kayıtlar kapasite kullanır;
+   kullanılan toplam kapasite asla başlangıç limitini aşamaz.
+G. Durumlar: Her kaydın sonucu 'kabul edildi / bekliyor / reddedildi'
+   kategorilerinden tam olarak biri olmalı. Bir kayıt iki durumda olamaz.
+
+Bu projede dinamik yeniden planlama, işlemi geri alma, internet,
+gerçek donanım, veri tabanı veya grafik arayüz tasarımı istenmiyor.
+
+============================================================
+4) BEKLENEN YAZILIM YAPISI
+============================================================
+- Python temel konuları ve OOP kullanılacak.
+- En az iki sınıf bulunacak: kayıt/talep bilgisini tutan kısım ve
+  tüm kayıtları değerlendirip karar veren kısım birbirinden ayrılmalı.
+- Sınıflara ait anlamlı özellikler ve metotlar kullanılmalı.
+- Liste/sözlük gibi standart Python veri yapıları kullanılabilir.
+- Fonksiyon ve değişken isimleri anlaşılır olmalı.
+- Harici kütüphane, JSON veya grafik arayüz gerekli değil.
+- Örnek veriler program içerisinde tanımlanabilir; sonuçların
+  okunabilir metin olarak gösterilmesi yeterli.
+
+============================================================
+5) SONUÇ OLARAK NE GÖRMEK İSTİYORUZ?
+============================================================
+İşlenen kayıt kimlikleri, bekleyen kayıt kimlikleri, reddedilen kayıt kimlikleri (kısa gerekçeyle), kullanılan ve kalan işlem yükü.
+
+Örnek bir kayıt reddedilmisse nedenini kısa bir cumleyle açıkla.
+Sadece bir liste gösterip neden o sonuca ulaşıldığını gizleme.
+
+============================================================
+6) KONTROL İÇİN KÜÇÜK ÖRNEK
+============================================================
+Başlangıç kapasitesi: 7 işlem birimi
+Kayitlar (yazıldıkları sırayla):
+   H1 | öncelik 5 | yük 4 | sağlam
+   H2 | öncelik 4 | yük 6 | sağlam
+   H3 | öncelik 4 | yük 3 | sağlam
+   H4 | öncelik 2 | yük 2 | bozuk
+
+Beklenen karar:
+İşlenenler: H1, H3 | Bekleyen: H2 | Reddedilen: H4 | Kullanılan: 7 | Kalan: 0.
+
+Bu örnek tek basina yeterli değildir; farklı durumlar da denenmeli.
+
+============================================================
+7) EN AZ 4 TEST SENARYOSU
+============================================================
+   1. Tüm kayıtlar sağlam ve toplam yük bütçe içinde: hepsi işlenmeli.
+   2. İki kayıt aynı öncelikte: eklenme sırası bozulmamalı.
+   3. Yükü fazla kayıt beklerken daha küçük sonraki kayıt işlenebilmeli.
+   4. Bozuk bütünlüklü veya geçersiz yükü olan kayıt reddedilmeli.
+
+Her testte beklediğin sonuç ile programin gerçek sonucu birbiriyle
+uyuşuyor mu kontrol et. Testleri nasıl hazırladığını gösterebilirsin.
+
+============================================================
+8) TESLİM VE DEĞERLENDİRME
+============================================================
+Teslim edilecekler:
+- Kendi yazdığın çalışır Python kaynak kodu.
+- En az 4 farklı test durumu ve sonuclari.
+- Algoritmani kendi cümlelerinle anlatan kısa açıklama (5-10 satır).
+
+DEĞERLENDİRME ÖZETİ (100 PUAN)
+- Algoritma ve kuralların doğru uygulanması: 40 puan
+- OOP (sınıfların ve sorumluluklarin doğru kullanımı): 20 puan
+- Okunabilir kod ve düzenli fonksiyonlar: 15 puan
+- Hata kontrolu ve 4 test senaryosu: 15 puan
+- Kısa algoritma aciklamasi: 10 puan
+
+Bu görevde ölçülen asıl beceri, kayıtları doğru kategoriye ayırırken işlem bütçesini tutarlı yönetebilmendir.
+
+NOT: Bu dosya, önceki görevin yerine geçen yeni ve kolaylastirilmis
+sürümdür. Eski gorev dosyalarıyla birleştirilmemelidir.

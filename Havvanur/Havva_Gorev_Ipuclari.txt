@@ -1,0 +1,78 @@
+﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
+BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
+
+AD SOYAD: Havva
+PROJE: Yer İstasyonu Kayıt İşleyicisi
+SON TESLİM: 14 Aralık 2026
+ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
+
+============================================================
+1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
+============================================================
+Elindeki tek bir kayıt hangi bilgileri taşımalı?
+Kayıtların hepsi hangi ortak kurallara göre seçilecek?
+En sonunda hangi üç grubu açıkça göstermelisin?
+
+Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
+Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
+
+============================================================
+2) SINIFLARIN SORUMLULUKLARINI AYIR
+============================================================
+Bir sınıf tek bir sistem kaydının bilgilerini ve geçerliliğini tutabilir; diğer sınıf kayıt grubunu, bütçeyi ve işlem sonuçlarını yönetebilir.
+
+Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
+ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
+sorumlulukları anlaşılır şekilde paylaştır.
+
+============================================================
+3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
+============================================================
+- Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
+  Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
+- Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
+- Öncelik 5, öncelik 1'den daha önce değerlendirilmelidir.
+- Eşit öncelikte ilk gelenin önce değerlendirilmesi unutulmamalı.
+- Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
+- Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
+
+============================================================
+4) BU PROJEYE ÖZEL İPUÇLARI
+============================================================
+1. Bir kaydın yüksek öncelikli olması, mutlaka işleneceği anlamına gelmez: kayıt bütçeye sığmıyorsa bekleyebilir. Bu durumda daha küçük yükü olan sonraki kayda da bakılmalı.
+
+2. Bozuk bir kayıtla sadece kapasitesi yetmediği için bekleyen kaydı aynı gruba koyma. Bu iki durumun nedeni farklı.
+
+3. Aynı öncelikte iki kayıt varsa, yer istasyonuna önce eklenen kaydın önce ele alınmasını nasıl koruyacağını düşün.
+
+============================================================
+5) HATA AYIKLAMA İÇİN 4 SORU
+============================================================
+1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
+2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
+3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
+4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
+   yalnızca bir listede mi bulunuyor?
+
+============================================================
+6) TEST FİKİRLERİ
+============================================================
+   1. Tüm kayıtlar sağlam ve toplam yük bütçe içinde: hepsi işlenmeli.
+   2. İki kayıt aynı öncelikte: eklenme sırası bozulmamalı.
+   3. Yükü fazla kayıt beklerken daha küçük sonraki kayıt işlenebilmeli.
+   4. Bozuk bütünlüklü veya geçersiz yükü olan kayıt reddedilmeli.
+
+============================================================
+7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
+============================================================
+Gerçek uçuş kayıtlarını okumak, log dosyası ayrıştırmak veya ağ bağlantısı kurmak gerekmiyor. Kayıtlar örnek veriler olarak temsil edilebilir.
+
+Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
+beklenmiyor. Kendi karar mantığını kurman ve neden doğru çalıştığını
+göstermen yeterli.
+
+İPUCU: Kısa, okunabilir ve doğru çalışan bir çözüm; gereksiz yere
+büyütülmüş bir projeden daha değerlidir.
+
+NOT: Bu ipuçları yalnızca aynı isimli YENİ 'Görev.txt' dosyası
+için hazırlanmıştır; eski sürümün ipuçlarıyla karıştırma.
