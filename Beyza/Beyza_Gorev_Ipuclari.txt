@@ -1,14 +1,10 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
 
 AD SOYAD: Beyza
 PROJE: Sensör Veri Kalite Kontrol Sistemi
-SON TESLİM: 14 Aralık 2026
-ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
 
-============================================================
 1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
-============================================================
+
 Elindeki tek bir kayıt hangi bilgileri taşımalı?
 Kayıtların hepsi hangi ortak kurallara göre seçilecek?
 En sonunda hangi üç grubu açıkça göstermelisin?
@@ -16,18 +12,18 @@ En sonunda hangi üç grubu açıkça göstermelisin?
 Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
 Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
 
-============================================================
+
 2) SINIFLARIN SORUMLULUKLARINI AYIR
-============================================================
+
 Bir sınıf tek bir sensör ölçümünü, diğer sınıf ölçümlerin kalite kontrolünü ve işlem bütçesini yönetebilir.
 
 Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
 ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
 sorumlulukları anlaşılır şekilde paylaştır.
 
-============================================================
+
 3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
-============================================================
+
 - Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
   Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
 - Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
@@ -36,35 +32,35 @@ sorumlulukları anlaşılır şekilde paylaştır.
 - Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
 - Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
 
-============================================================
+
 4) BU PROJEYE ÖZEL İPUÇLARI
-============================================================
+
 1. Ölçümün 0-100 aralığında olması, işlem bütçesine sığacağı anlamına gelmez. “Geçersiz” ile “geçerli ama bekleyen” durumlarını ayır.
 
 2. Aralık kontrolünde 0 ve 100 değerlerinin de geçerli olduğunu unutma. Bir ölçümü kontrol ederken önce gerçekten sayı olup olmadığını ele almak iyi fikir olabilir.
 
 3. Önceliği aynı olan iki ölçümün değerlendirme sırası, verilerin sisteme geliş sırasına bağlı.
 
-============================================================
+
 5) HATA AYIKLAMA İÇİN 4 SORU
-============================================================
+
 1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
 2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
 3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
 4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
    yalnızca bir listede mi bulunuyor?
 
-============================================================
+
 6) TEST FİKİRLERİ
-============================================================
+
    1. 0 ve 100 sınır değerleri geçerli kabul edilmeli.
    2. Eşit öncelikli ölçümlerde ilk gelen önce değerlendirilmeli.
    3. İşlem bütçesine sığmayan bir veri beklerken sonraki küçük veri işlenebilmeli.
    4. 101 veya sayı olmayan ölçüm verisi reddedilmeli.
 
-============================================================
+
 7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
-============================================================
+
 Gerçek sensör bağlantısı, grafik çizimi, filtreleme, ortalama/hareketli ortalama ve veri bilimi kütüphaneleri istenmiyor. Değerler örnek veriler olarak tutulabilir.
 
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
