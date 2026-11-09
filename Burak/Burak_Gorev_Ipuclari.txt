@@ -1,14 +1,9 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL PYTHON PROJESİ | GÖREV İPUÇLARI | YENİ SÜRÜM
 
 AD SOYAD: Burak
-PROJE: Laboratuvar Kaynak Dağıtım Sistemi
-SON TESLİM: 14 Aralık 2026
-ZORLUK: 5/10 | 4-5 günde tamamlanabilecek kapsam
+SON TESLİM: 14 Ekim 2026 Saat 18.00
 
-============================================================
 1) ALGORİTMAYI YAZMADAN ÖNCE DÜŞÜN
-============================================================
 Elindeki tek bir kayıt hangi bilgileri taşımalı?
 Kayıtların hepsi hangi ortak kurallara göre seçilecek?
 En sonunda hangi üç grubu açıkça göstermelisin?
@@ -16,18 +11,17 @@ En sonunda hangi üç grubu açıkça göstermelisin?
 Küçük bir örnek tablo kurup her kayıt için karar vermeye çalış.
 Önce kağıt üzerinde doğru sonuç bulmak kodu kurmanı kolaylaştırır.
 
-============================================================
 2) SINIFLARIN SORUMLULUKLARINI AYIR
-============================================================
+
 Bir sınıf bir talebi temsil edebilir; diğer sınıf stok miktarı ve taleplerin işlenmesiyle ilgilenebilir.
 
 Hangi bilgilerin tek bir kayda, hangi bilgilerin bütün sisteme
 ait olduğunu kendine sor. Bir sınıfa bütün işi yüklemek yerine
 sorumlulukları anlaşılır şekilde paylaştır.
 
-============================================================
+
 3) SIRALAMA VE KARAR AKIŞINDA DİKKAT
-============================================================
+
 - Kayıt kimliği, öncelik veya kapasite değeri geçersiz olabilir.
   Bu tip bilgileri kararlara katmadan önce kontrol etmeyi düşün.
 - Uygunluk koşulunu ayrı bir adım gibi ele almak kodu sadeleştirebilir.
@@ -36,35 +30,35 @@ sorumlulukları anlaşılır şekilde paylaştır.
 - Her kabul işleminden sonra kapasitenin ne kadar kaldığını bilmelisin.
 - Bir kayıt sığmadığında başka kayıtları kontrol etmeyi unutma.
 
-============================================================
+
 4) BU PROJEYE ÖZEL İPUÇLARI
-============================================================
+
 1. Stok, yalnızca gerçekten karşılanan bir talep için azalmalı. Yetkisiz veya stok yetmediği için bekletilen talepleri stoktan düşürme.
 
 2. Öncelikli ama karşılanamayan bir talep için işlemi tamamen durdurmak zorunda değilsin; sonraki küçük bir talep mevcut stoğa sığabilir.
 
 3. Bir talep için gerekli bilgi ile tüm talepleri değerlendiren karar mantığını aynı yerde toplamak yerine ayırmayı düşün.
 
-============================================================
+
 5) HATA AYIKLAMA İÇİN 4 SORU
-============================================================
+
 1. Hangi girdi geçersiz sayılıyor, bunu açıkça ayırıyor musun?
 2. Eşit öncelikli kayıtlarda gerçekten eklenme sırası korundu mu?
 3. Toplam kullanılan kapasite hiçbir durumda limiti geçti mi?
 4. Kabul edilen, bekleyen ve reddedilen kayıtların her biri
    yalnızca bir listede mi bulunuyor?
 
-============================================================
+
 6) TEST FİKİRLERİ
-============================================================
+
    1. Tüm talepler yetkili ve toplam miktar yeterli: hepsi karşılanmalı.
    2. Eşit öncelikli iki talepte ilk kaydedilen önce değerlendirilmeli.
    3. Büyük talep beklerken daha küçük talep kalan stoğu kullanabilmeli.
    4. Yetkisiz ya da negatif miktarlı talep reddedilmeli.
 
-============================================================
+
 7) İŞİ KOLAYLAŞTIRAN KAPSAM SINIRI
-============================================================
+
 Birden fazla malzeme türü, stok yenileme ve satın alma önerisi bu ödevin kapsamında değil. Tek bir ortak kaynağı doğru yönetmen yeterli.
 
 Senden hazır kodun kopyalanması veya karmaşık bir uygulama arayüzü
