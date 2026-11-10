@@ -13,7 +13,7 @@ for row in packages:
 		unverified_ones.append(row[0])
 	if row[2] > max_capacity:
 		try:
-			packages.remove(row[0])
+			packages.remove(row)
 		except ValueError:
 			pass
 		too_big_ones.append(row[0])
