@@ -69,21 +69,21 @@ for rs in matrix:
 
 selected_items = []
 unselected_items = []
+used_size = 0
 #Backtracking(geri izleme ve paketleri ortaya çıkarma)
 c = max_capacity
 for r in range(item_amount, 0, -1):
 	if r==1:
 		selected_items.append(packages[r-1][0])
+		used_size += packages[r-1][2]
 		continue
 	if matrix[r-1][c-1] == matrix[r-2][c-1]:
 		unselected_items.append(packages[r-1][0])
 		continue
 	else:
 		selected_items.append(packages[r-1][0])
+		used_size += packages[r-1][2]
 		c = max_capacity-packages[r-1][2]
 
-print("Kabul Edilenler: ", selected_items)
-print("Bekleyenler: ", unselected_items)
-print("Reddedilenler---")
-print("	Doğrulanmayanlar: ", unverified_ones)
-print("	Kapasiteyi tek başına aşanlar: ", too_big_ones)
+print(f"Gönderilenler: {selected_items} | Bekleyenler: {unselected_items} | Reddedilenler: Büyük olduğu için {too_big_ones}, Doğrulanmadığı için {unverified_ones} | Gönderilen Boyut: {used_size} KB | Kalan: {max_capacity-used_size} KB")
+
