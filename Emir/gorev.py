@@ -14,9 +14,6 @@ class TelemetryPacket:
         self.size = size
         self.is_verified = bool(is_verified)
 
-    def __repr__(self):
-        return f"{self.packet_id}(P:{self.priority}, S:{self.size}KB)"
-
 
 class TelemetryScheduler:
     def __init__(self, max_capacity: int):
