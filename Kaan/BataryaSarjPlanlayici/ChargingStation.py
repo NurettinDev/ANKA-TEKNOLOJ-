@@ -5,10 +5,13 @@ class ChargingStation:
         self.all_batteries = batteries
         self.max_temp = max_temp 
         self.min_temp = min_temp
-
+        self.cs_situation()
+        
     def cs_situation(self):
-        print("\nŞARJ İSTASYONU".center(30, "-"))
-        print("-" * 35 + f"\nŞarj İstasyonu Kapasitesi : {self.cs_capacity}\nŞarj istasyonunda {len(self.all_batteries)} tane batarya var")
+        print("ŞARJ İSTASYONU".center(30, "-"))
+        print(f"Şarj İstasyonu Kapasitesi : {self.cs_capacity}\nŞarj istasyonunda {len(self.all_batteries)} tane batarya var")
 
         for battery_id, battery in self.all_batteries.items():
-            print(f"{battery_id} ID'li batarya için :\n\tŞarj İstasyonundan İstenilen Enerji : {battery.energy_needed} \n\tBataryanın Sıcaklığı : {battery.battery_temp}")
+            print(f"{battery_id} ID'li batarya için :\n\tŞarj İstasyonundan İstenilen Enerji : {battery.energy_needed}" 
+                  f"\n\tBataryanın Sıcaklığı : {battery.battery_temp}"
+                  f"\n\tBatarya Önceliği : {battery.priority}")
