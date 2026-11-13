@@ -1,0 +1,12 @@
+İstenilen sensör verilerini diğer fonksiyonlarda da kullanacağım için  ana class oluşturdum (Veri)
+Verilerin özelliklerini rastgele (10 tane, istenen durumların gösterileceği şekilde) kafama göre verdim ve bir dictionary(ham veriler) içinde tuttum(anahtar değer biçiminde)
+(ham veriler) içindeki  verileri rastgeleliği sağlaması için random fonksiyonuna tabi tuttum
+bir for döngüsü kurarak rastgele gelen verilerin özelliklerini sözlükteki anahtar değer olarak çekmek için atama yaptım
+
+for içinde kontrol değerlerini karşılaştırmak için if blokları ile reddedilenleri, reddedilen klasörüne eklemesini sağladım(nedenleri ile beraber)
+Geri kalanları yani kontrolden geçenleri geçerli listesine ekledim
+ve sıraladım Önce önceliği en yüksek olanları öne dizmesini, öncelikler birbiriyle aynıysa sisteme ilk giriş yapmış olanı (geliş sırası küçük olanı) bir adım öne taşıyarak sıralama yapmasını sağlayacak kısmı ekledim
+Kabul edilenler ve bekleyenler  için liste oluşturdum
+Kapasite kontrolü için bir for döngüsü kullandım kapasiteyi aşanları reddedilenlere, yeterli olanları kabul edilenlere ekledim 
+kalan kapasiteyi hesaplamak için toplam kapasiteden kullanılan kapasiteyi çıkartarak kalan kapasiteyi bulup ekrana yazdırdım
+-" En az 4 farklı test durumu ve sonuclari" istenilmiş bunu kod içinde girdiğim sensör verilerini yazdığım 'ham veriler' sözlüğüne her durumdan olacak şekilde ekledim kodu çalıştırınca anlayacaksınız
