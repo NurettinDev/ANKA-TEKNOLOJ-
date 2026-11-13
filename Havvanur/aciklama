@@ -1,0 +1,7 @@
+bu projede iHA yer istasyonuna gelen sistem kayıtlarının sınırlı kapasiteye göre nasıl işleneceğini belirleyen bir simülasyon yazdım.
+kodu iki sınıfa ayırdım kayit ve yeristasyonu seklinde kayıt sınıfı tek bir kaydın kimlik öncelik yük ve bütünlük bilgiileribi tutuyor
+uygun_mu() fonksiyonu ile kaydın bütünlüğününün sağlam olup olmadığna ve önceliğinin 1 - 5 arası ve yükünün pozitif olup olmadığına bakıyor.
+yer istasyonu sınıfı istasyon kapasitesini ve gelen kayıtlara bakıyor
+çalışma mantığında ise kimliği boş olan aynı kimlikte gelen veya bütünlüğü bozuk olan kayıtları ayırıp nedenleriyle birlikte reddedilenler listedine ekledim sağlam kayıtları önceliği en yüksekten düşüğe sıraladım pythonun sort() fonksiyonu aynı öncelikteki elemnalrın sırasını bozmadığından ilk kaydın önceliğini korumuş oldu.
+sıralanan kayıtları tek tek kapasiteyegöre kontrol ettim kalan kapasiteye sığanları işlenenler listesine alıp kapasiteden düştüm,
+sığmayanları bekleyenler listesine aldım.Büyük bir kayıt sığmadğında işlemi durdurmayıp arkadan gelen daha küçük kayıtların kalan kapasiteye sığıp sığmadığını kontrol ettim
