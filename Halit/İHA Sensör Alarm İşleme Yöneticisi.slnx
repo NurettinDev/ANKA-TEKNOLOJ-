@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="İHA Sensör Alarm İşleme Yöneticisi/İHA Sensör Alarm İşleme Yöneticisi.vcxproj" />
+</Solution>
