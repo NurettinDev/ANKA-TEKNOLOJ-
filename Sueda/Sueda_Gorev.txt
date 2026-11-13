@@ -3,9 +3,6 @@ BİREYSEL PYTHON PROJE GÖREVİ
 
 AD: Sueda
 PROJE: İHA Yazılım Test Sırası Planlayıcısı
-ZORLUK: 5/10 (orta-alt)
-HEDEF ÇALIŞMA SÜRESİ: 4-5 gün (yaklaşık 8-15 saat)
-SON TESLİM: 14 Aralık 2026 Pazartesi, 23.59 (TSİ)
 
 ============================================================
 1. PROJENİN AMACI
