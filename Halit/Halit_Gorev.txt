@@ -1,10 +1,6 @@
 ﻿ANKA TEKNOLOJİ - YAZILIM EKİBİ
-BİREYSEL C++ PROJE GÖREVİ
 
 PROJE: İHA Sensör Alarm İşleme Yöneticisi
-PROGRAMLAMA DİLİ: C++ (C++17)
-ZORLUK: 5/10
-HEDEF ÇALIŞMA SÜRESİ: 4-5 gün
 SON TESLİM: 13 Kasım 2026 Cuma, 23.59
 
 1. PROJENİN AMACI
@@ -117,13 +113,6 @@ Not: S4 normal olduğu için inceleme süresinden düşülmez.
 - En az dört testin sonucu
 - Kullanılan sınıfları ve algoritma akışını açıklayan
   kısa, 5-10 satırlık not
-
-DEĞERLENDİRME (100 PUAN)
-Algoritma doğruluğu: 40
-OOP ve sınıf tasarımı: 20
-C++ kod düzeni: 15
-Hata kontrolü ve testler: 15
-Kısa açıklama: 10
 
 AMAÇ: Hazır çözüm kullanmadan, C++ temel bilgileri ve OOP ile
 doğru karar veren bir yazılım geliştirmektir.
