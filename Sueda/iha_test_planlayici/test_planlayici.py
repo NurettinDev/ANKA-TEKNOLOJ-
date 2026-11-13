@@ -108,7 +108,7 @@ class TestPlanlayici:
         for test, neden in self.reddedilen_testler:
             sonuc.reddedilen_ekle(test, neden)
 
-        # önceliğe göre sıralama neden sorted() değil->sıraladığım şeyler birer nesne 
+        
         sirali_testler = sorted(
             self.gecerli_testler,
             key=lambda t: (-t.oncelik, t.sira_no)
